@@ -8,13 +8,19 @@ class Stack {
     pop() {
         return this.ret.pop();
     }
-    peek() {
+    top() {
         const len = this.ret.length;
         if (len === 0) {
             return null;
         } else {
             return this.ret[len - 1];
         }
+    }
+    isEmpty() {
+        return this.ret.length === 0;
+    }
+    output() {
+        return this.ret.slice();
     }
 }
 
